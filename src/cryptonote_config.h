@@ -78,13 +78,10 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  200;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-//TODO This port will be used by the daemon to establish connections with p2p network
-const int      P2P_DEFAULT_PORT                              =  7666;
-//TODO This port will be used by the daemon to interact with simlewallet
-const int      RPC_DEFAULT_PORT                              =  8666;
-
-const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  7666;
-const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  8666;
+const int P2P_DEFAULT_PORT = 7620;
+const int RPC_DEFAULT_PORT = 8666;
+const size_t P2P_LOCAL_WHITE_PEERLIST_LIMIT = 1000;
+const size_t P2P_LOCAL_GRAY_PEERLIST_LIMIT = 5000;
 
 const uint32_t P2P_DEFAULT_CONNECTIONS_COUNT                 = 8;
 const uint32_t P2P_DEFAULT_HANDSHAKE_INTERVAL                = 60;            // seconds
@@ -118,7 +115,5 @@ __attribute__((unused))
 const std::initializer_list<CheckpointData> CHECKPOINTS = {
  { 5000, "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115"  },
 };
-
 } // cryptonote
-
 #define ALLOW_DEBUG_COMMANDS
